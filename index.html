@@ -3,30 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Practice 2</title>
 </head>
 <body>
-    <header>
-        <img src="assets/icons/LOGO.png" alt="company logo">
-        <h1>your personalized coffee</h1>
-        <img src="assets/icons/shopping-cart-3.png" alt="shopping cart">
-        <nav>
-            <ul>
-                <li>trang chu</li>
-                <li>coffee</li>
-                <li>phin ma mau</li>
-                <li>combo phin phe</li>
-                <li>giftset</li>
-                <li>lien he</li>
+    <img src="assets/img/Баннер.png" alt="banner" class="header__banner">
+    <header class="header">
+        <div class="header__left_block">
+            <img src="assets/icons/LOGO.png" alt="company logo" class="header__logo">
+            <h1>your <br><span class="white-h1">personalized </span><br>coffee</h1>
+        </div>
+        <div class="header__right_block">
+            <img src="assets/icons/shopping-cart-3.png" alt="shopping cart" class="header__shopping-cart">
+            <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item">trang chu</li>
+                <li class="header__item">coffee</li>
+                <li class="header__item">phin ma mau</li>
+                <li class="header__item">combo phin phe</li>
+                <li class="header__item">giftset</li>
+                <li class="header__item">lien he</li>
             </ul>
         </nav>
-        <img src="assets/img/Баннер.png" alt="banner">
+        </div>
     </header>
     <main>
-        <section>
+        <section class="base">
             <h3>Your Personalized Coffee</h3>
             <h2>coffee build your base</h2>
-            <ul>
+            <ul class="base__list">
                 <li>
                     <article>
                         <img src="assets/icons/base-1.png" alt="">
@@ -65,27 +70,27 @@
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="chuan">
             <h3>Choose Your Favourite</h3>
             <h2>chuan gu dung v!</h2>
             <ul>
                 <li>
+                    <img src="assets/img/IMAGE.png" alt="">
                     <article>
-                        <img src="assets/img/IMAGE.png" alt="">
-                        <p>99.000</p>
+                        <p class="chuan__price">99.000</p>
                         <h4>REVO Morning</h4>
-                        <p>đắng, hậu ngọt, hương hoa </p>
-                        <button>mua ngay</button>
+                        <p class="chuan__description">đắng, hậu ngọt, hương hoa </p>
+                        <button class="buy">mua ngay</button>
                         <button>CHI TIẾT</button>
                     </article>
                 </li>
                 <li>
+                    <img src="assets/img/IMAGE(2).png" alt="">
                     <article>
-                        <img src="assets/img/IMAGE(2).png" alt="">
-                        <p>85.000</p>
+                        <p class="chuan__price">85.000</p>
                         <h4>REVO Everyday</h4>
-                        <p>cân bằng, hậu đắng, vị chocolate</p>
-                        <button>
+                        <p class="chuan__description">cân bằng, hậu đắng, vị chocolate</p>
+                        <button class="buy">
                             mua ngay
                         </button>
                         <button>
@@ -94,84 +99,98 @@
                     </article>
                 </li>
                 <li>
+                    <img src="assets/img/image(1).png" alt="">
                     <article>
-                        <img src="assets/img/image(1).png" alt="">
-                        <p>139.000</p>
+                        <p class="chuan__price">139.000</p>
                         <h4>REVO Origin</h4>
-                        <p>hậu ngọt, ít đắng, vị chua dâu</p>
-                        <button>mua ngay</button>
+                        <p class="chuan__description">hậu ngọt, ít đắng, vị chua dâu</p>
+                        <button class="buy">mua ngay</button>
                         <button>CHI TIẾT</button>
                     </article>
                 </li>
                 <li>
+                    <img src="assets/img/IMAGE(3).png" alt="">
                     <article>
-                        <img src="assets/img/IMAGE(3).png" alt="">
-                        <p>75.000</p>
+                        <p class="chuan__price">75.000</p>
                         <h4>REVO Đậm Đà</h4>
-                        <p>đậm đà, đắng, truyền thống</p>
-                        <button>mua ngay</button>
+                        <p class="chuan__description">đậm đà, đắng, truyền thống</p>
+                        <button class="buy">mua ngay</button>
                         <button>CHI TIẾT</button>
                     </article>
                 </li>
             </ul>
         </section>
-        <section>
+        <section class="giftset">
             <h3>Best Gift For Best Friend</h3>
             <h2>giftset</h2>
+            <img src="assets/img/pr-0018-r.png" alt="" class="giftset__banner">
             <article>
-                <img src="assets/img/pr-0018-r.png" alt="">
-                <p>285.000</p>
+                <p class="giftset__price">285.000</p>
                 <h4>Giftset "Cà phê phin Việt Nam"</h4>
-                <p>Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê 
+                <p class="giftset__description">Món quà tuyệt vời dành cho người sành cà phê. Hạt cà phê 
                     được Revo cẩn trọng chọn lựa, rang xay theo công nghệ và bí 
                     quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình 
                     yêu, sự đam mê của người làm cà phê… tạo ra những tách cà 
                     phê tinh khiết chỉ dành riêng cho bạn</p>
-                <img src="assets/icons/IC_coffee.png" alt="">
-                <p>Loại hạt</p>
-                <p>Fine Robusta Blend</p>
-                <img src="assets/icons/IC_Mountain.png" alt="">
-                <p>Độ cao</p>
-                <p>700 - 800m</p>
-                <button>mua ngay</button>
-                <button>CHI TIẾT</button>
+                <div class="giftset__specs">
+                    <img src="assets/icons/IC_coffee.png" alt="">
+                    <div>
+                        <p>Loại hạt</p>
+                        <p>Fine Robusta Blend</p>
+                    </div>
+                    <img src="assets/icons/IC_Mountain.png" alt="">
+                    <div>
+                        <p>Độ cao</p>
+                        <p>700 - 800m</p>
+                    </div>
+                </div>
+                <div class="giftset__buttons">
+                    <button class="buy">mua ngay</button>
+                    <button>CHI TIẾT</button>
+                </div>
             </article>
         </section>
-        <section>
+        <section class="combo">
             <h3>Your Personalized Coffee</h3>
             <h2>combo phin phe</h2>
             <ul>
                 <li>
                     <article>
                         <img src="assets/img/image(6).png" alt="">
-                        <p>147.000 <span>155.000</span></p>
+                        <p class="combo__price">147.000 <span class="combo__cross-price">155.000</span></p>
                         <h4>Combo Revo Đậm Đà</h4>
                         <p>Hàm lượng caffein trong Revo Đậm Đà 
                             đủ mạnh để làm bạn tỉnh táo làm việc...</p>
-                        <button>mua ngay</button>
-                        <button>CHI TIẾT</button>
+                        <div class="combo__buttons">
+                            <button class="buy">mua ngay</button>
+                            <button>CHI TIẾT</button>
+                        </div>
                     </article>
                 </li>
                 <li>
                     <article>
                         <img src="assets/img/image(7).png" alt="">
-                        <p>156.000 <span>165.000</span></p>
+                        <p class="combo__price">156.000 <span class="combo__cross-price">165.000</span></p>
                         <h4>Combo Revo Everyday</h4>
                         <p>Revo Everyday được phối trộn giữa vị 
                             đắng của hạt Robusta và hương thơm...</p>
-                        <button>mua ngay</button>
-                        <button>CHI TIẾT</button>
+                        <div class="combo__buttons">
+                            <button class="buy">mua ngay</button>
+                            <button>CHI TIẾT</button>
+                        </div>
                     </article>
                 </li>
                 <li>
                     <article>
                         <img src="assets/img/image(8).png" alt="">
-                        <p>275.000 <span>280.000</span></p>
+                        <p class="combo__price">275.000 <span class="combo__cross-price">280.000</span></p>
                         <h4>Combo Revo Honey</h4>
                         <p>Honey – trong tên gọi Revo Honey đến 
                             từ phương pháp chế biến hạt Arabica...</p>
-                        <button>mua ngay</button>
-                        <button>CHI TIẾT</button>
+                        <div class="combo__buttons">
+                            <button class="buy">mua ngay</button>
+                            <button>CHI TIẾT</button>
+                        </div>
                     </article>
                 </li>
 
