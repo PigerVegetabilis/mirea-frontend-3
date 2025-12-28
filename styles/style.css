@@ -317,7 +317,6 @@ button{
     color: #415167;
     text-decoration:line-through;
 }
-/* =============== Footer =============== */
 
 footer {
     background-color: #EDF0F5;
@@ -330,4 +329,309 @@ footer {
     line-height: 20px;
     height: 60px;
     margin: 0 auto;
+}
+
+/* =============== Медиа-запросы =============== */
+
+@media (max-width: 1024px) {
+    .header {
+        height: 600px;
+        padding-left: 5%;
+    }
+    
+    h1 {
+        padding-top: 250px;
+        font-size: 44px;
+        line-height: 56px;
+    }
+    
+    .header__right_block {
+        padding-left: 100px;
+        padding-right: 5%;
+    }
+    
+    .header__banner {
+        left: 30%;
+        width: 70%;
+    }
+    
+    .base__list {
+        flex-wrap: wrap;
+    }
+    
+    .base__list li {
+        width: 45%;
+        margin-bottom: 30px;
+    }
+    
+    .chuan li {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    .chuan article {
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+    
+    .giftset__banner {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 30px;
+        max-width: 300px;
+    }
+    
+    .giftset article {
+        padding-left: 30px;
+        text-align: center;
+    }
+    
+    .giftset__specs {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .combo li {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 5%;
+    }
+    
+    .header__left_block {
+        padding-top: 20px;
+        text-align: center;
+    }
+    
+    h1 {
+        padding-top: 20px;
+        font-size: 36px;
+        line-height: 44px;
+    }
+    
+    .header__right_block {
+        padding: 30px 5%;
+        margin-top: 20px;
+        padding-left: 5%;
+    }
+    
+    .header__banner {
+        display: none;
+    }
+    
+    .header__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .header__item {
+        padding: 5px 15px;
+        padding-bottom: 10px;
+    }
+    
+    .header__shopping-cart {
+        padding-bottom: 30px;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .base {
+        padding: 40px 5%;
+    }
+    
+    .base__list {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .base__list li {
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    
+    .chuan {
+        background: #415167;
+        padding: 40px 5%;
+    }
+    
+    .chuan ul {
+        padding-top: 40px;
+    }
+    
+    .chuan li {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .chuan img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .chuan article {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .giftset {
+        padding: 40px 5%;
+    }
+    
+    .combo {
+        padding: 40px 5%;
+        background: #415167;
+    }
+    
+    .combo ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .combo li {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    
+    h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    
+    h4 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    .header__right_block {
+        padding: 20px;
+    }
+    
+    .header__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .base__list li {
+        width: 100%;
+    }
+    
+    .base h4 {
+        padding-top: 20px;
+    }
+    
+    .chuan li {
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .chuan h2, .chuan h3{
+        color: white;
+    }
+    
+    .chuan__description {
+        margin-bottom: 20px;
+    }
+    
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 5px;
+    }
+    
+    .chuan article button,
+    .giftset__buttons,
+    .combo__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .giftset article {
+        padding: 20px;
+    }
+    
+    .giftset__description {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    
+    footer {
+        font-size: 14px;
+        padding: 15px;
+        height: auto;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    .header__item {
+        font-size: 14px;
+    }
+    
+    .chuan__price,
+    .giftset__price,
+    .combo__price {
+        font-size: 18px;
+    }
+    
+    .combo__cross-price {
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .header {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    h1 {
+        padding-top: 100px;
+    }
+    
+    .header__right_block {
+        padding-top: 50px;
+    }
+    
+    .header__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .header__item {
+        padding: 5px 10px;
+    }
 }
