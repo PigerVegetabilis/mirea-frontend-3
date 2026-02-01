@@ -9,6 +9,7 @@
 :root {
     --text-color: #415167;
     --transition: 0.3s ease-in-out;
+    --primary-color: #C7A17A;
 }
 
 html{
@@ -387,7 +388,7 @@ footer {
     height: 56px;
     background: var(--primary-color);
     color: white;
-    border: none;
+    border: 1px solid black;
     border-radius: 50%;
     font-size: 24px;
     cursor: pointer;
@@ -722,6 +723,10 @@ footer {
         width: 100%;
     }
     
+    .combo h3, .combo h2{
+        color: white;
+    }
+
     .giftset article {
         padding: 20px;
     }
