@@ -4,7 +4,8 @@
 
 **Использующиеся технологии:**
 
-*HTML5
-*CSS
+* HTML5
+* CSS
+* JavaScript
 
 [Ссылка на Pages]<https://pigervegetabilis.github.io/mirea-frontend-3/>
