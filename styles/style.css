@@ -6,8 +6,14 @@
     padding: 0;
 }
 
+:root {
+    --text-color: #415167;
+    --transition: 0.3s ease-in-out;
+}
+
 html{
     overscroll-behavior:none;
+    scroll-behavior: smooth;
 }
 
 
@@ -48,6 +54,46 @@ h1{
     padding-top: 100px;
     padding-left: 200px;
     z-index: -5;
+}
+
+.header a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 44px;
+    height: 44px;
+    background: #C7A17A;
+    border: 1px solid black;
+    padding: 12px 10px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-toggle__line {
+    width: 100%;
+    height: 3px;
+    background: var(--text-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active .menu-toggle__line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
 .header__left_block{
@@ -132,7 +178,7 @@ h4{
 
 p{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .chuan{
@@ -166,6 +212,7 @@ p{
     height: 100%;
     padding-left: 10%;
     padding-top: 10%;
+    position: relative;
 }
 
 .chuan__price, .giftset__price, .combo__price{
@@ -331,6 +378,43 @@ footer {
     margin: 0 auto;
 }
 
+/* Кнопка "Наверх" */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: #1e3a23;
+    transform: scale(1.1);
+}
+
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
 /* =============== Медиа-запросы =============== */
 
 @media (max-width: 1024px) {
@@ -388,10 +472,11 @@ footer {
     }
     
     .giftset__specs {
-        flex-direction: column;
         gap: 20px;
     }
-    
+    .giftset__specs img{
+        object-fit: cover;
+    }
     .combo li {
         width: calc(50% - 15px);
     }
@@ -403,7 +488,19 @@ footer {
         height: auto;
         padding: 20px 5%;
     }
+
+    .menu-toggle {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
     
+    .menu-toggle__line {
+        background: #415167; /* Цвет иконки гамбургера */
+    }
+
     .header__left_block {
         padding-top: 20px;
         text-align: center;
@@ -416,9 +513,53 @@ footer {
     }
     
     .header__right_block {
-        padding: 30px 5%;
-        margin-top: 20px;
-        padding-left: 5%;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background: #415167;
+        transition: var(--transition);
+        padding: 80px 20px 20px;
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    .header__right_block.active {
+        left: 0;
+    }
+    
+    .header__list {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .header__item {
+        padding: 0;
+    }
+    
+    .nav__link {
+        display: block;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: var(--transition);
+    }
+    
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
     }
     
     .header__banner {
@@ -499,6 +640,14 @@ footer {
         width: 100%;
         max-width: 400px;
     }
+
+    .scroll-top {
+        width: 52px;
+        height: 52px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 22px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -555,15 +704,22 @@ footer {
     button {
         font-size: 14px;
         padding: 8px 16px;
-        margin: 5px;
+        margin: 5px auto;
+        width: 80%;
+        
     }
     
     .chuan article button,
     .giftset__buttons,
-    .combo__buttons {
+    .combo__buttons
+    {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    .combo__buttons{
+        width: 100%;
     }
     
     .giftset article {

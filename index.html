@@ -13,18 +13,35 @@
             <img src="assets/icons/LOGO.png" alt="company logo" class="header__logo">
             <h1>your <br><span class="white-h1">personalized </span><br>coffee</h1>
         </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+        </button>
         <div class="header__right_block">
             <img src="assets/icons/shopping-cart-3.png" alt="shopping cart" class="header__shopping-cart">
-            <nav class="header__nav">
-            <ul class="header__list">
-                <li class="header__item">trang chu</li>
-                <li class="header__item">coffee</li>
-                <li class="header__item">phin ma mau</li>
-                <li class="header__item">combo phin phe</li>
-                <li class="header__item">giftset</li>
-                <li class="header__item">lien he</li>
-            </ul>
-        </nav>
+            <nav class="header__nav" id="mainNav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="#" class="nav__link active">trang chu</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="nav__link">coffee</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="nav__link">phin ma mau</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="nav__link">combo phin phe</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="nav__link">giftset</a>
+                    </li>
+                    <li class="header__item">
+                        <a href="#" class="nav__link">lien he</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main>
@@ -200,5 +217,10 @@
     <footer>
         © Revo Coffee Việt Nam - 2018
     </footer>
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+        ↑
+    </button>
+    <script src="scripts/menu.js"></script>
 </body>
 </html>
